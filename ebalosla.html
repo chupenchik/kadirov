@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Elite&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik+Beastly&family=Rubik+Mono+One&family=Special+Elite&family=Tiny5&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извинения</title>
+    <style>h1 {
+        text-shadow: 
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000; /* Чёрная обводка вокруг текста */
+    }
+    
+        body {font-family: "Rubik Mono One", monospace;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            background-color: black; /* Черный фон */
+            color: rgb(255, 255, 255); /* Белый текст */
+            
+        }
+
+
+        img {
+            filter: blur(8px);
+            max-width: 100%; /* Ограничение ширины изображения */
+            height: auto; /* Автоматическая высота для сохранения пропорций */
+            margin: 20px 0; /* Отступы сверху и снизу */
+            position: relative;
+        }
+        button {font-family: "Rubik Mono One", monospace;
+        
+            padding: 35px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-image: url("kadik.jpg.jpg");
+            color: #ffffff;
+            text-shadow: 
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000; /* Чёрная обводка вокруг текста */
+            background-size: 800px;
+          
+    background-repeat: no-repeat; /* Отключает повтор картинки */
+    background-position: center; /* Центрирует картинку внутри кнопки */
+
+
+        }
+
+        .kadirov {
+            padding: 0 552px;
+            margin-bottom: 400px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #response {
+            font-size: 52px;
+            font-weight: bold;
+            text-shadow: 
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000; /* Чёрная обводка вокруг текста */
+        
+        }
+        p{
+    
+        font-size: 60px;
+            font-family: "Rubik Beastly", system-ui;
+        color: #ffffff;
+        background-color:rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <img src="./kadirov.jpg" alt="kadirov">
+    <div class="kadirov">
+        <h1>Извиняйся дон</h1>
+        <button onclick="apologize()">Умоляю, простите пожалуйста, ради бога, сорри май бед, в следующий раз исправлюсь
+            
+        </button>
+        <div id="response"></div>
+    </div>
+    <p>От решения владыки чучухстана зависит ваша жизнь так что я бы не торопился</p>
+ <script>
+        function apologize() {
+            const responses = [
+                { text: "Прощаю дон", color: "#1eff00" },
+                { text: "Тэбэ конэц дон", color: "red" }
+            ];
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            const response = responses[randomIndex];
+            
+            const responseElement = document.getElementById("response");
+            responseElement.innerText = response.text;
+            responseElement.style.color = response.color; // Установка цвета текста
+        
+        }
+    </script>
+</body>
+</html>
